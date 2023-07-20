@@ -394,6 +394,6 @@ if [[ -z "$NO_SWAP" ]]; then
     removeSwap
 fi
 
-if [[ -z "$NO_REBOOT" ]]; then
+if [[ "$REBOOT" ]]; then
   reboot
 fi
