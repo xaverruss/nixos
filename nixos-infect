@@ -48,23 +48,6 @@ makeConf() {
   services.zerotierone.joinNetworks = [
     "9f77fc393eef1e5b"
   ];
- 
-   environment.systemPackages = with pkgs; [
-    git
-    wget
-    btop
-    ncdu
-    tmux
-    neofetch
-    nano
-    vim
-    tree
-    pstree
-    busybox
-    croc
-    magic-wormhole
-    btrfs-progs
-  ];
 
 }
 EOF
