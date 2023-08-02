@@ -36,7 +36,7 @@ makeConf() {
   ];
 
   boot.tmp.cleanOnBoot = true;
-  zramSwap.enable = ${zramswap};
+  zramSwap.enable = true;
   networking.hostName = "$(hostname -s)";
   networking.domain = "$(hostname -d)";
   services.openssh.enable = true;
