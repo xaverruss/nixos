@@ -35,6 +35,8 @@ makeConf() {
     $NIXOS_IMPORT
   ];
 
+  system.stateVersion = "23.05";
+
   boot.tmp.cleanOnBoot = true;
   zramSwap.enable = true;
   networking.hostName = "$(hostname -s)";
