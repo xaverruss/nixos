@@ -3,7 +3,7 @@
 ## quick start xaver russ edition
 
 ```
-  curl https://raw.githubusercontent.com/xaverruss/nixos-infect/master/nixos-infect | NIX_CHANNEL=nixos-23.05 bash -x
+  curl https://raw.githubusercontent.com/xaverruss/nixos-infect/master/nixos-infect | bash -x
 ```
 
 
