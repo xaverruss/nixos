@@ -50,6 +50,12 @@ makeConf() {
   #services.zerotierone.joinNetworks = [
   #  "9f77fc393eef1e5b"
   #];
+  environment.defaultPackages = with pkgs; [
+  git
+  nano
+  btop
+  htop
+  ];
 
 }
 EOF
