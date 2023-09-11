@@ -3,8 +3,13 @@
 ## quick start xaver russ edition
 
 ```
+  wget https://raw.githubusercontent.com/xaverruss/nixos-infect/master/nixos-infect
+```
+
+```
   curl https://raw.githubusercontent.com/xaverruss/nixos-infect/master/nixos-infect | bash -x
 ```
+
 
 
 
