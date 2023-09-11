@@ -46,15 +46,19 @@ makeConf() {
   users.users.root.password = "1234";
 
   nixpkgs.config.allowUnfree = true;
-  #services.zerotierone.enable = true;
-  #services.zerotierone.joinNetworks = [
-  #  "9f77fc393eef1e5b"
-  #];
+  
+  services.zerotierone = {
+	enable = true;
+	joinNetworks = [
+		"9f77fc393eef1e5b"
+	];
+  };
+
   environment.defaultPackages = with pkgs; [
   git
   nano
   btop
-  htop
+  tmux
   ];
 
 }
