@@ -1,4 +1,4 @@
-# NixOS-Infect
+# NixOS Basic Install config + nixos-infect customized
 
 ## quick start xaver russ edition
 
