@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "thought you might have forgot :D "
+lsblk
+echo "\n"
+
 # Read HOSTNAME
 read -p "Enter Hostname for this system value: " hostname
 
