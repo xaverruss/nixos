@@ -11,7 +11,7 @@ mv 1-install-uefi.sh.tmp 1-install-uefi.sh
 
 # Replace "DISK" in script 2
 sed "s|/dev/DISK|/dev/${disk_value}|g" "2-install-uefi.sh" > "2-install-uefi.sh.tmp"
-mv 1-install-uefi.sh.tmp 2-install-uefi.sh
+mv 2-install-uefi.sh.tmp 2-install-uefi.sh
 
 
 echo "Replacement complete."

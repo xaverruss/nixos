@@ -11,7 +11,7 @@ mv 1-install-legacy.sh.tmp 1-install-legacy.sh
 
 # Replace "DISK" in script 2
 sed "s|/dev/DISK|/dev/${disk_value}|g" "2-install-legacy.sh" > "2-install-legacy.sh.tmp"
-mv 1-install-legacy.sh.tmp 2-install-legacy.sh
+mv 2-install-legacy.sh.tmp 2-install-legacy.sh
 
 
 echo "Replacement complete."
