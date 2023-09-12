@@ -1,4 +1,8 @@
 { config, pkgs, ... }: {
+
+  # Set bootload timeout to 1 sec
+  boot.loader.timeout = 1;
+
   # Root User
   users.users.root = {
     initialHashedPassword = "1234";
@@ -57,10 +61,10 @@
   };
 
   swapDevices = [{
-    device = "/swapfile.img";
-    size = 2048;
-    discardPolicy = "both";
+    device = "/var/lib/swapfile";
+    size = 2 * 1024;
     priority = 5;
+    discardPolicy = "both";
     options = [ "nofail" "defaults" ];
   }];
 
