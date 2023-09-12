@@ -4,23 +4,15 @@
   imports = [ ./flatpak.nix ./users.nix ];
 
   # Services
-  # services = {
-  #   xserver = {
-  #     enable = true;
-  #     # layout = "us";
-  #     xkbVariant = "";
-  #     excludePackages = [ pkgs.xterm ];
-  #     # videoDrivers = [ "nvidia" ];
-  #     # input.enable = true;
-  #     displayManager.gdm = {
-  #       enable = true;
-  #       wayland = true;
-  #     };
-  #   };
-  #   dbus.enable = true;
-  #   gvfs.enable = true;
-  #   tumbler.enable = true;
-  # };
+  services = {
+    xserver = {
+      enable = true;
+      displayManager.sddm = {
+        enable = true;
+        defaultSession = "Hyprland";
+      };
+    };
+  };
 
   programs = {
     hyprland = {
