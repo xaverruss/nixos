@@ -11,12 +11,12 @@ mv ../install.nix.tmp ../install.nix.nix
 read -p "Enter /dev/DISK value: " disk_value
 
 # Replace "DISK" in script 1
-sed "s|/dev/DISK|/dev/${disk_value}|g" "1-install-uefi.sh" > "1-install-uefi.sh.tmp"
-mv 1-install-uefi.sh.tmp 1-install-uefi.sh
+sed "s|/dev/DISK|/dev/${disk_value}|g" "1-install.sh" > "1-install.sh.tmp"
+mv 1-install.sh.tmp 1-install.sh
 
 # Replace "DISK" in script 2
-sed "s|/dev/DISK|/dev/${disk_value}|g" "2-install-uefi.sh" > "2-install-uefi.sh.tmp"
-mv 2-install-uefi.sh.tmp 2-install-uefi.sh
+sed "s|/dev/DISK|/dev/${disk_value}|g" "2-install.sh" > "2-install.sh.tmp"
+mv 2-install.sh.tmp 2-install.sh
 
 
 echo "Replacement complete."
