@@ -55,27 +55,14 @@
     enable = true;
     priority = 1000;
   };
-  swapDevices = [
-    {
-      label = "swap";
-      discardPolicy = "both";
-      priority = 100;
-      options = [ "nofail" "defaults" ];
-    }
-    {
-      label = "swap2";
-      discardPolicy = "both";
-      priority = 99;
-      options = [ "nofail" "defaults" ];
-    }
-    {
-      device = "/tmp/swapfile";
-      size = 2048;
-      discardPolicy = "both";
-      priority = 5;
-      options = [ "nofail" "defaults" ];
-    }
-  ];
+
+  swapDevices = [{
+    device = "/swapfile.img";
+    size = 2048;
+    discardPolicy = "both";
+    priority = 5;
+    options = [ "nofail" "defaults" ];
+  }];
 
   # SSHD and Hostkeys
   services.openssh = {
