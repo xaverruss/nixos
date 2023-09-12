@@ -4,23 +4,23 @@
   imports = [ ./flatpak.nix ];
 
   # Services
-  services = {
-    xserver = {
-      enable = true;
-      # layout = "us";
-      xkbVariant = "";
-      excludePackages = [ pkgs.xterm ];
-      # videoDrivers = [ "nvidia" ];
-      # input.enable = true;
-      displayManager.gdm = {
-        enable = true;
-        wayland = true;
-      };
-    };
-    dbus.enable = true;
-    gvfs.enable = true;
-    tumbler.enable = true;
-  };
+  # services = {
+  #   xserver = {
+  #     enable = true;
+  #     # layout = "us";
+  #     xkbVariant = "";
+  #     excludePackages = [ pkgs.xterm ];
+  #     # videoDrivers = [ "nvidia" ];
+  #     # input.enable = true;
+  #     displayManager.gdm = {
+  #       enable = true;
+  #       wayland = true;
+  #     };
+  #   };
+  #   dbus.enable = true;
+  #   gvfs.enable = true;
+  #   tumbler.enable = true;
+  # };
 
   programs = {
     hyprland = {
@@ -39,34 +39,34 @@
   };
 
   # XDG Portals
-  xdg = {
-    autostart.enable = true;
-    portal = {
-      enable = true;
-      extraPortals = [ pkgs.xdg-desktop-portal pkgs.xdg-desktop-portal-gtk ];
-    };
-  };
+  # xdg = {
+  #   autostart.enable = true;
+  #   portal = {
+  #     enable = true;
+  #     extraPortals = [ pkgs.xdg-desktop-portal pkgs.xdg-desktop-portal-gtk ];
+  #   };
+  # };
 
   # Security
-  security = {
-    pam.services.swaylock = {
-      text = ''
-        auth include login
-      '';
-    };
-  };
+  # security = {
+  #   pam.services.swaylock = {
+  #     text = ''
+  #       auth include login
+  #     '';
+  #   };
+  # };
 
   # Hardware
-  hardware = {
-    opengl = {
-      enable = true;
-      # driSupport = true;
-      # driSupport32Bit = true;
-      # extraPackages = with pkgs; [ vaapiVdpau libvdpau-va-gl ];
-      # extraPackages32 = with pkgs.pkgsi686Linux; [ libva ];
-      # setLdLibraryPath = true;
-    };
-  };
+  # hardware = {
+  #   opengl = {
+  #     enable = true;
+  #     # driSupport = true;
+  #     # driSupport32Bit = true;
+  #     # extraPackages = with pkgs; [ vaapiVdpau libvdpau-va-gl ];
+  #     # extraPackages32 = with pkgs.pkgsi686Linux; [ libva ];
+  #     # setLdLibraryPath = true;
+  #   };
+  # };
 
   environment.systemPackages = with pkgs; [
     kitty
@@ -103,25 +103,25 @@
     adwaita-qt6
   ];
 
-  environment.sessionVariables = {
-    # POLKIT_AUTH_AGENT =
-    #   "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-    # GSETTINGS_SCHEMA_DIR =
-    #   "${pkgs.gsettings-desktop-schemas}/share/gsettings-schemas/${pkgs.gsettings-desktop-schemas.name}/glib-2.0/schemas";
-    # LIBVA_DRIVER_NAME = "nvidia";
-    XDG_SESSION_TYPE = "wayland";
-    # GBM_BACKEND = "nvidia-drm";
-    # __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    WLR_NO_HARDWARE_CURSORS = "1";
-    NIXOS_OZONE_WL = "1";
-    MOZ_ENABLE_WAYLAND = "1";
-    SDL_VIDEODRIVER = "wayland";
-    _JAVA_AWT_WM_NONREPARENTING = "1";
-    CLUTTER_BACKEND = "wayland";
-    WLR_RENDERER = "vulkan";
-    XDG_CURRENT_DESKTOP = "Hyprland";
-    XDG_SESSION_DESKTOP = "Hyprland";
-    GTK_USE_PORTAL = "1";
-    NIXOS_XDG_OPEN_USE_PORTAL = "1";
-  };
+  # environment.sessionVariables = {
+  #   # POLKIT_AUTH_AGENT =
+  #   #   "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+  #   # GSETTINGS_SCHEMA_DIR =
+  #   #   "${pkgs.gsettings-desktop-schemas}/share/gsettings-schemas/${pkgs.gsettings-desktop-schemas.name}/glib-2.0/schemas";
+  #   # LIBVA_DRIVER_NAME = "nvidia";
+  #   XDG_SESSION_TYPE = "wayland";
+  #   # GBM_BACKEND = "nvidia-drm";
+  #   # __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+  #   WLR_NO_HARDWARE_CURSORS = "1";
+  #   NIXOS_OZONE_WL = "1";
+  #   MOZ_ENABLE_WAYLAND = "1";
+  #   SDL_VIDEODRIVER = "wayland";
+  #   _JAVA_AWT_WM_NONREPARENTING = "1";
+  #   CLUTTER_BACKEND = "wayland";
+  #   WLR_RENDERER = "vulkan";
+  #   XDG_CURRENT_DESKTOP = "Hyprland";
+  #   XDG_SESSION_DESKTOP = "Hyprland";
+  #   GTK_USE_PORTAL = "1";
+  #   NIXOS_XDG_OPEN_USE_PORTAL = "1";
+  # };
 }
