@@ -4,6 +4,9 @@
   imports = [ # Include hardware config and install.nix
     ./hardware-configuration.nix
     ./nixfiles/install.nix
+    # Optional nixfiles
+    # ./nixfiles/gnome.nix
+    # ./nixfiles/kde.nix
   ];
 
   # Use the systemd-boot EFI boot loader.

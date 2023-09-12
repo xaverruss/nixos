@@ -4,9 +4,9 @@
   imports = [ # Include hardware config and install.nix
     ./hardware-configuration.nix
     ./nixfiles/install.nix
-    # Other demo nixfiles
-    ./nixfiles/gnome.nix
-    ./nixfiles/kde.nix
+    # Optional nixfiles
+    # ./nixfiles/gnome.nix
+    # ./nixfiles/kde.nix
   ];
 
   # Setup GRUB Device
