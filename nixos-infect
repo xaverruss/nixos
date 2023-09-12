@@ -48,17 +48,17 @@ makeConf() {
   nixpkgs.config.allowUnfree = true;
   
   services.zerotierone = {
-	enable = true;
-	joinNetworks = [
-		"9f77fc393eef1e5b"
-	];
+    enable = true;
+    joinNetworks = [
+      "9f77fc393eef1e5b"
+    ];
   };
 
   environment.defaultPackages = with pkgs; [
-  git
-  nano
-  btop
-  tmux
+    git
+    nano
+    btop
+    tmux
   ];
 
 }
