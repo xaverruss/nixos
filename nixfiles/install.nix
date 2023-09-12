@@ -138,6 +138,7 @@
     croc
     btrfs-progs
     speedtest-cli
+    magic-wormhole
 
   ];
 }
