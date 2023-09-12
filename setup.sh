@@ -44,7 +44,9 @@ echo "This system currently uses:"
 if [ -d "/sys/firmware/efi" ]; then
   echo "UEFI mode"
   cd ./uefi
+  bash
 else
   echo "Legacy (BIOS) mode"
   cd ./legacy
+  bash
 fi

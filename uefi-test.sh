@@ -1,3 +1,3 @@
 cd ./uefi
-ls 
+bash
 echo ""
