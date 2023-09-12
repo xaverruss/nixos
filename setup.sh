@@ -4,18 +4,18 @@ echo "thought you might have forgot :D "
 lsblk
 echo " "
 
-# Read HOSTNAME
-read -p "Enter Hostname for this system value: " hostname
-
 # Prompt the user for the /dev/DISK value
 read -p "Enter /dev/DISK value: " disk_value
-
+# Read HOSTNAME
+read -p "Enter Hostname for this system value: " hostname
+# Check Back with user
 read -p "OK ? else, CTRL + C "
 
-# HOSTNAME 
+# HOSTNAME replace 
 sed -i "s/HOSTNAME/$hostname/g" install.nix
+echo "Replaced in install.nix"
 
-# UEFI
+# UEFI replace
 for file in "uefi"/*; do
   if [ -f "$file" ]; then
     # Replace "DISK" with the value of the hostname disk_value
@@ -24,8 +24,7 @@ for file in "uefi"/*; do
   fi
 done
 
-# LEGACY 
-
+# LEGACY replace
 for file in "legacy"/*; do
   if [ -f "$file" ]; then
     # Replace "DISK" with the value of the hostname disk_value
