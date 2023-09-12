@@ -7,6 +7,7 @@
     # Optional nixfiles
     # ./nixfiles/gnome.nix
     # ./nixfiles/kde.nix
+    # ./nixfiles/awesome.nix
   ];
 
   # Use the systemd-boot EFI boot loader.
