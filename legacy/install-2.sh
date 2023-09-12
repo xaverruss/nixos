@@ -11,5 +11,5 @@ echo " "
 echo " "
 echo "Setting up /mnt/etc/nixos"
 cp ./configuration.nix /mnt/etc/nixos/configuration.nix
-cp ../nixfiles /mnt/etc/nixos/
+cp ../ /mnt/etc/nixos/gh
 

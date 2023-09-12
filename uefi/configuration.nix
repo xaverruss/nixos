@@ -3,11 +3,11 @@
 {
   imports = [ # Include hardware config and install.nix
     ./hardware-configuration.nix
-    ./nixfiles/install.nix
+    ./gh/nixfiles/install.nix
     # Optional nixfiles
-    # ./nixfiles/gnome.nix
-    # ./nixfiles/kde.nix
-    # ./nixfiles/awesome.nix
+    # ./gh/nixfiles/gnome.nix
+    # ./gh/nixfiles/kde.nix
+    # ./gh/nixfiles/hyprland.nix
   ];
 
   # Use the systemd-boot EFI boot loader.
@@ -46,5 +46,8 @@
   #      device = "nodev";
   #   };
   # };
+
+  system.stateVersion = "23.05";
+  networking.hostName = "HOSTNAME";
 
 }

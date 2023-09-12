@@ -140,9 +140,5 @@
     speedtest-cli
 
   ];
-
-  system.stateVersion = "23.05";
-  networking.hostName = "HOSTNAME";
-
 }
 

@@ -12,8 +12,10 @@ read -p "Enter Hostname for this system value: " hostname
 read -p "OK ? else, CTRL + C "
 
 # HOSTNAME replace 
-sed -i "s/HOSTNAME/$hostname/g" install.nix
-echo "Replaced in install.nix"
+sed -i "s/HOSTNAME/$hostname/g" uefi/configuration.nix
+echo "Replaced in uefi/configuration.nix"
+sed -i "s/HOSTNAME/$hostname/g" legacy/configuration.nix
+echo "Replaced in legacy/configuration.nix"
 
 # UEFI replace
 for file in "uefi"/*; do
