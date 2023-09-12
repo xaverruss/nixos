@@ -3,7 +3,7 @@
 {
   imports = [ # Include hardware config and install.nix
     ./hardware-configuration.nix
-    ./install.nix
+    ./nixfiles/install.nix
   ];
 
   # Use the systemd-boot EFI boot loader.

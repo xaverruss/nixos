@@ -7,6 +7,48 @@
     ];
   };
 
+  # Auto system upgrades
+  system.autoUpgrade = {
+    enable = true;
+    persistent = true;
+    channel = "https://channels.nixos.org/nixos-23.05";
+    dates = "daily";
+    randomizedDelaySec = "45min";
+  };
+
+  # Set your time zone.
+  time.timeZone = "Europe/Berlin";
+
+  # Select internationalisation properties.
+  i18n.defaultLocale = "en_US.UTF-8";
+
+  i18n.extraLocaleSettings = {
+    LC_ADDRESS = "de_DE.UTF-8";
+    LC_IDENTIFICATION = "de_DE.UTF-8";
+    LC_MEASUREMENT = "de_DE.UTF-8";
+    LC_MONETARY = "de_DE.UTF-8";
+    LC_NAME = "de_DE.UTF-8";
+    LC_NUMERIC = "de_DE.UTF-8";
+    LC_PAPER = "de_DE.UTF-8";
+    LC_TELEPHONE = "de_DE.UTF-8";
+    LC_TIME = "de_DE.UTF-8";
+  };
+
+  # auto optimise store
+  nix.settings.auto-optimise-store = true;
+  nix.extraOptions = ''
+    min-free = ${toString (100 * 1024 * 1024)}
+    max-free = ${toString (1024 * 1024 * 1024)}
+    keep-outputs = false
+    keep-derivations = false
+  '';
+
+  # Experimental Features
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # Limit journal size
+  services.journald.extraConfig = "SystemMaxUse=250M";
+
   # tmp Clean and zramswap
   boot.tmp.cleanOnBoot = true;
   zramSwap = {
