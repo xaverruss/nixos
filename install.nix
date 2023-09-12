@@ -104,6 +104,8 @@
     busybox
     croc
     btrfs-progs
+    speedtest-cli
+
   ];
 
   system.stateVersion = "23.05";
