@@ -60,13 +60,13 @@
     priority = 1000;
   };
 
-  swapDevices = [{
-    device = "/var/lib/swapfile";
-    size = 2 * 1024;
-    priority = 5;
-    discardPolicy = "both";
-    options = [ "nofail" "defaults" ];
-  }];
+  # swapDevices = [{
+  #   device = "/var/lib/swapfile";
+  #   size = 2 * 1024;
+  #   priority = 5;
+  #   discardPolicy = "both";
+  #   options = [ "nofail" "defaults" ];
+  # }];
 
   # SSHD and Hostkeys
   services.openssh = {
