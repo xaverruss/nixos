@@ -2,7 +2,7 @@
 
 echo "thought you might have forgot :D "
 lsblk
-echo "\n"
+echo " "
 
 # Read HOSTNAME
 read -p "Enter Hostname for this system value: " hostname
