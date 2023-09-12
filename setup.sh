@@ -35,3 +35,10 @@ echo "Replacement complete."
 echo "Double check if DISKS have been replaced correctly."
 echo " !!!!!!!"
 echo "Double check the 2. install script if partitions are correctly set"
+
+echo "This system currently uses:"
+if [ -d "/sys/firmware/efi" ]; then
+  echo "UEFI mode"
+else
+  echo "Legacy (BIOS) mode"
+fi
