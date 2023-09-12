@@ -11,7 +11,7 @@
       xkbVariant = "";
       excludePackages = [ pkgs.xterm ];
       # videoDrivers = [ "nvidia" ];
-      libinput.enable = true;
+      # input.enable = true;
       displayManager.gdm = {
         enable = true;
         wayland = true;
@@ -31,12 +31,7 @@
         enable = true;
       };
     };
-    waybar = {
-      enable = true;
-      package = pkgs.waybar.overrideAttrs (oldAttrs: {
-        mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-      });
-    };
+    waybar = { enable = true; };
     thunar = {
       enable = true;
       plugins = with pkgs.xfce; [ thunar-archive-plugin thunar-volman ];
@@ -65,18 +60,18 @@
   hardware = {
     opengl = {
       enable = true;
-      driSupport = true;
-      driSupport32Bit = true;
-      extraPackages = with pkgs; [ vaapiVdpau libvdpau-va-gl ];
-      extraPackages32 = with pkgs.pkgsi686Linux; [ libva ];
-      setLdLibraryPath = true;
+      # driSupport = true;
+      # driSupport32Bit = true;
+      # extraPackages = with pkgs; [ vaapiVdpau libvdpau-va-gl ];
+      # extraPackages32 = with pkgs.pkgsi686Linux; [ libva ];
+      # setLdLibraryPath = true;
     };
   };
 
   environment.systemPackages = with pkgs; [
     kitty
     polkit_gnome
-    libva-utils
+    # libva-utils
     fuseiso
     udiskie
     gnome.adwaita-icon-theme
@@ -109,10 +104,10 @@
   ];
 
   environment.sessionVariables = {
-    POLKIT_AUTH_AGENT =
-      "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-    GSETTINGS_SCHEMA_DIR =
-      "${pkgs.gsettings-desktop-schemas}/share/gsettings-schemas/${pkgs.gsettings-desktop-schemas.name}/glib-2.0/schemas";
+    # POLKIT_AUTH_AGENT =
+    #   "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+    # GSETTINGS_SCHEMA_DIR =
+    #   "${pkgs.gsettings-desktop-schemas}/share/gsettings-schemas/${pkgs.gsettings-desktop-schemas.name}/glib-2.0/schemas";
     # LIBVA_DRIVER_NAME = "nvidia";
     XDG_SESSION_TYPE = "wayland";
     # GBM_BACKEND = "nvidia-drm";
