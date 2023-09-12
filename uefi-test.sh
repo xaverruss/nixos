@@ -1,3 +1,0 @@
-cd ./uefi
-bash
-echo ""
