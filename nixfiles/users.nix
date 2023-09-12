@@ -5,14 +5,14 @@
     shell = pkgs.zsh;
     description = "user";
     extraGroups = [ "networkmanager" ];
-    # initialHashedPassword = "passwd";
+    # initialPassword = "passwd";
   };
   users.users.admin = {
     isNormalUser = true;
     shell = pkgs.zsh;
     description = "admin";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
-    initialHashedPassword = "changeme";
+    initialPassword = "changeme";
   };
 
 }
