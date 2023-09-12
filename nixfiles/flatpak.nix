@@ -8,5 +8,10 @@
     '';
   };
   # Add firefox, ya need a browser dont ya ? 
-  environment.systemPackages = with pkgs; [ firefox ];
+  environment.systemPackages = with pkgs; [
+    firefox
+    vscode
+    bitwarden-cli
+    virt-manager
+  ];
 }

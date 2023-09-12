@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./flatpak.nix ];
+  imports = [ ./flatpak.nix ./users.nix ];
   # Enable network manager
   networking.networkmanager.enable = true;
 
