@@ -10,3 +10,5 @@ lsblk
 echo " "
 
 echo "Double check the 2. install script if partitions are correctly set"
+echo " "
+cat install-2.sh
