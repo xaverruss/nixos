@@ -77,7 +77,7 @@
     swaylock
     xdg-desktop-portal-hyprland
     hyprpaper
-    rofi
+    rofi-wayland
     firefox-wayland
     swww
     grim
