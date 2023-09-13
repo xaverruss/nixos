@@ -54,7 +54,6 @@
 
   environment.systemPackages = with pkgs; [
     weston
-    waypaper
     swaybg
     pipewire
     mako
