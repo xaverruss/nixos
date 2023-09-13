@@ -9,7 +9,7 @@
       enable = true;
       displayManager.sddm = {
         enable = true;
-        defaultSession = "Hyprland";
+        #defaultSession = "Hyprland";
         settings = { General = { DisplayServer = "wayland"; }; };
       };
     };
