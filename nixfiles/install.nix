@@ -5,7 +5,7 @@
 
   # Root User
   users.users.root = {
-    initialHashedPassword = "1234";
+    initialPassword = "1234";
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEFdTFM5ZbGytRp8orRu4cK+kLcQdPFVKqaN0iNVlp2p slothington"
     ];
