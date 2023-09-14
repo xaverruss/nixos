@@ -38,7 +38,7 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
-  # auto optimise store
+  # auto optimise store 
   nix.settings.auto-optimise-store = true;
   nix.extraOptions = ''
     min-free = ${toString (100 * 1024 * 1024)}
@@ -46,6 +46,15 @@
     keep-outputs = false
     keep-derivations = false
   '';
+
+  # GC
+  nix.gc = {
+    automatic = true;
+    dates = "daily";
+    options = "--delete-older-than 7d";
+    persistent = true;
+    randomizedDelaySec = "45min";
+  };
 
   # Experimental Features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
