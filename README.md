@@ -1,3 +1,7 @@
+Moved to Private ForgeJo
+https://gitea.hostedbymyself.de/xaver.russ/nixos-installer
+
+
 # NixOS Basic Install config + nixos-infect customized
 
 ## quick start xaver russ edition
